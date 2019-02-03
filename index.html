@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/mini.style.css">
+  <title>Грейды для frontend</title>
+</head>
+<body>
+  <main class="main-window">
+    <div class="main-left">
+      <div class="container">
+        <h2>Грейды для frontend</h2>
+        <div class="grades">
+          <div class="grades-container">
+            <div class="bar-and-toggle">
+              <input id="volume" type="range" name="volume" min="1" max="3" step="1">
+              <ul class="grades-list">
+               <li class="grades-list-item junior">Junior</li>
+               <li class="grades-list-item middle">Middle</li>
+               <li class="grades-list-item grade-senior">Senior</li>
+             </ul>
+           </div>
+           <p>Переход на следующий грейд - улучшение<br>качества кода и увеличение ответственности.</p>
+         </div>
+       </div>
+       <div class="change-image clearfix">
+        <div class="change-image-body">
+          <h2>Тело</h2>
+          <div class="change-body change-image-container">
+            <div id="blue" class="change-item change-body-blue blue-point">
+              <img src="img/blue.svg" width="43" height="47" alt="Синее тело">
+            </div>
+            <div id="green" class="change-item change-body-green">
+             <img src="img/green.svg" width="43" height="47" alt="Зеленое тело">
+           </div>
+           <div id="red" class="change-item change-body-red">
+             <img src="img/red.svg" width="43" height="47" alt="Красное тело">
+           </div>
+         </div>
+       </div>
+       <div class="change-image-face">
+        <h2>Лицо</h2>
+        <div class="change-face change-image-container">
+          <div id="face-1" class="change-item blue-point">
+           <img src="img/blue-1.svg" width="33" height="20" alt="Первое лицо">
+         </div>
+         <div id="face-2" class="change-item">
+           <img src="img/blue-2.svg" width="33" height="20" alt="Второе лицо">
+         </div>
+         <div id="face-3" class="change-item">
+           <img src="img/blue-3.svg" width="33" height="20" alt="Третье лицо">
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+<div class="main-right">
+ <div class="skills">
+  <div class="junior">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>Adaptive</span>
+    <span>Base JS</span>
+    <span>SQL</span>
+    <span>Git</span>
+    <span>ESLint</span>
+    <span>SASS</span>
+    <span>Pug</span>
+    <span>Gulp</span>
+    <span>Webpack</span>
+  </div>
+  <div class="middle">
+    <span>TDD</span>
+    <span>JS</span>
+    <span>Canvas</span>
+    <span>SVG</span>
+    <span>Bash</span>
+    <span>CI/CD</span>
+    <span>React</span>
+    <span>D3.js</span>
+    <span>Vue</span>
+    <span>SPA</span>
+    <span>ES6</span>
+  </div>
+  <div class="senior hidden">
+    <span>ThreeJs</span>
+    <span>WebGL</span>
+    <span>Chrome Extensions</span>
+    <span>Node</span>
+    <span>Express</span>
+    <span>Architecture</span>
+  </div>
+</div>
+<div class="avatar">
+  <div class="avatar-face avatar-blue-face-1"></div>
+  <div class="avatar-body avatar-body-blue"></div>
+  <div class="avatar-bottom"></div>
+</div>
+</div>
+</main>
+
+<script src="js/mini.skills.js"></script>
+<script src="js/mini.avatar.js"></script>
+
+</body>
+</html>
