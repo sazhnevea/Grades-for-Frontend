@@ -29,12 +29,21 @@ function removeBodyClasses() {
 }
 
 function removeFaceClasses() {
+  var currentColor = document
+                     .getElementById('blue')
+                     .getAttribute('color-index');
   for (var i = 1; i < 4; i++) {
   avatarFace
   .classList
-  .remove('avatar-blue-face-' + i);
+  .remove('avatar-' + currentColor + 'face-' + i);
   }
 }
+
+function defaultAvatarFaceClass() {
+ avatarFace.removeAttribute('class');
+  avatarFace.setAttribute('class', 'avatar-face');
+}
+
 
 function setBody(color) {
   avatarBodyColor
@@ -50,7 +59,8 @@ function setFace(evt) {
   var currentIndex = getClickedTag(evt)
                      .getAttribute('id');
   if (currentIndex && currentColor) {
-    avatarFace.setAttribute('class', 'avatar-face');
+    avatarFace
+    .setAttribute('class', 'avatar-face');
     avatarFace
     .classList
     .add('avatar-' + currentColor + '-' + currentIndex);
@@ -59,6 +69,16 @@ function setFace(evt) {
  .classList
  .add('avatar-blue-' + currentIndex);
   }
+}
+
+function setDefaultFace() {
+document.getElementById('face-1').classList.add('blue-point');
+  var currentColor = document
+                     .getElementById('blue')
+                     .getAttribute('color-index');
+    avatarFace
+    .classList
+    .add('avatar-' + currentColor + '-face-1');
 }
 
 function getClickedTag(evt) {
@@ -124,13 +144,18 @@ bodyItems.onclick = function (evt) {
     setFacesList(evt);
     setBodyDataIndex(evt);
     removeFaceBluePoint();
+    defaultAvatarFaceClass();
+    setDefaultFace();
   }
 };
 
 faces.onclick = function (evt) {
+var id = getClickedTag(evt).getAttribute('id');
+  if (id) {
   evt.preventDefault();
   removeFaceClasses();
   setFace(evt);
   removeFaceBluePoint();
   addBluePoint(evt);
+  }
 };
